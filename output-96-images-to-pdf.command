@@ -78,8 +78,8 @@ def filter_and_create_pdfs(image_folder, output_pdf_gfp, output_pdf_dapi):
     image_files = natural_sort([os.path.join(image_folder, file) for file in os.listdir(image_folder)
                    if file.lower().endswith(('png', 'jpg', 'jpeg', 'bmp', 'tif'))])
 
-    gfp_images = [file for file in image_files if 'gfp' in file.lower()]
-    dapi_images = [file for file in image_files if 'dapi' in file.lower()]
+    gfp_images = [file for file in image_files if 'GFP' in file.upper()]
+    dapi_images = [file for file in image_files if 'DAPI' in file.upper()]
 
     images_to_pdf_fixed_size(gfp_images, output_pdf_gfp)
     images_to_pdf_fixed_size(dapi_images, output_pdf_dapi)
