@@ -4,14 +4,11 @@ an executable .command script to organize 96 well plate images to a single page 
 # Usage
 
 ## **Installation**
-You will need to have python3 preinstalled with the following packages:
+You will need to have command line tools (xcrun) installed if using macOS and python3 with the following packages (or alternatively through homebrew):
 
+```bash
 pip3 install opencv-python numpy reportlab
-
-or alternatively with pip -
-
-
-pip install opencv-python numpy reportlab
+```
 
 ## **Run Script**
 Copy output_DAPIGFP_96tiff_16bits.command to directory that contains total 192 files (96 DAPI and 96 GFP images) and execute command file. 
